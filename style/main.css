@@ -1,0 +1,129 @@
+@import 'font.css';
+
+/* //////////////////////////////////////////// */
+/* 
+:root{
+    
+}
+ */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    max-width: 0000px; /* 0000 + 30 */
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* //////////////////////////////////////////// */
+
+/* ////////////////body-start////////////////// */
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 120px;
+    background: black;
+    width: 100%;
+    height: 100vh;
+}
+  
+.loader__all {
+    display: flex;
+    opacity: 0.8;
+}
+  
+.loader {
+    width: 20px;
+    height: 20px;
+    margin: 0 8px;
+    border-radius: 5%;
+    background-color: #000000;
+    animation: loaderAnimation 1.5s infinite ease-in-out, colorChange 3s infinite linear;
+}
+  
+.loader:nth-child(2) {
+    animation-delay: 0.15s;
+}
+  
+.loader:nth-child(3) {
+    animation-delay: 0.3s;
+}
+  
+.loader:nth-child(4) {
+    animation-delay: 0.45s;
+}
+  
+.loader:nth-child(5) {
+    animation-delay: 0.6s;
+}
+  
+@keyframes loaderAnimation {
+    0%, 100% {
+        transform: scale(1) scaleY(1);
+    }
+    25% {
+        transform: scale(1.2) scaleY(3);
+        border-radius: 5%;
+    }
+    50% {
+        transform: scale(1) scaleY(1);
+    }
+    75% {
+        transform: scale(1.2) scaleY(3);
+        border-radius: 5%;
+    }
+}
+  
+@keyframes colorChange {
+    0%, 20% {
+        background-color: mediumvioletred;
+    }
+    40% {
+        background-color: #e74c3c;
+    }
+    60% {
+        background-color: #2ecc71;
+    }
+    80%, 100% {
+        background-color: mediumvioletred;
+    }
+}
+
+.loading__all {
+    text-align: center;
+}
+  
+.loading-text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    background: linear-gradient(45deg, mediumvioletred, #e74c3c, #2ecc71, mediumvioletred);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientAnimation 10s linear infinite;
+}
+  
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 400% 400%;
+    }
+}
+/* ////////////////body-end//////////////////// */
